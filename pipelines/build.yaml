@@ -8,10 +8,7 @@ steps:
     entrypoint: 'npm'
     args: ['run', 'build']
   - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'
-    args: ['use', '${_FIREBASE_PROJECT_ID}', '--serviceAccount', '${_GOOGLE_APPLICATION_CREDENTIALS}']
-  - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'
-    args: ['target:apply', 'hosting', 'react-budget-dashboard', 'react-budget-dashboard', '--serviceAccount', '${_GOOGLE_APPLICATION_CREDENTIALS}']
-  - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'
-    args: 
-    - deploy, '--serviceAccount', '${_GOOGLE_APPLICATION_CREDENTIALS}', '--only', 'hosting:react-budget-dashboard']
+    args:
+      - deploy
+      - --only=hosting:react-budget-dashboard
 timeout: 1200s
