@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "richmond-apps-usa"
-  }
+  },
+  "targets": {
+    "richmond-apps-usa": {
+      "hosting": {
+        "react-budget-dashboard": [
+          "react-budget-dashboard"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
