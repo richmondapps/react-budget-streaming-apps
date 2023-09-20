@@ -8,6 +8,9 @@ steps:
     entrypoint: 'npm'
     args: ['run', 'build']
   - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'
+    credentials:
+      serviceAccountKey: '_GOOGLE_APPLICATION_CREDENTIALS'
+  - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'
     args:
       - deploy
       - --only=hosting:react-budget-dashboard
