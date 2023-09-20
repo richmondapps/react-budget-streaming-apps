@@ -19,7 +19,7 @@ const AddBudgetForm = () => {
             type="text"
             name="newBudget"
             id="newBudget"
-            placeholder="e.g., NETFLIX"
+            placeholder="e.g., PETS"
             required
           />
         </div>
