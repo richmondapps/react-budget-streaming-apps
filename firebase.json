@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "build",
+    "public": "build/react-router-budget-app",
     "ignore": [
       "firebase.json",
       "**/.*",
