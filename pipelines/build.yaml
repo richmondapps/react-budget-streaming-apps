@@ -7,9 +7,13 @@ steps:
   - name: 'node:18.0'
     entrypoint: 'npm'
     args: ['run', 'build']
-  - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'
-    credentials:
-      serviceAccountKey: '_GOOGLE_APPLICATION_CREDENTIALS'
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        echo "${_GOOGLE_APPLICATION_CREDENTIALS}" > /tmp/credentials.json
+        gcloud auth activate-service-account --key-file=/tmp/credentials.json
   - name: 'gcr.io/${_FIREBASE_PROJECT_ID}/firebase'
     args:
       - deploy
