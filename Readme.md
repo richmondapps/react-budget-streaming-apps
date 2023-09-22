@@ -3,7 +3,7 @@
 * React v18.2
 * React Router Dom 6.8
 * Vite 4.1
-* CI/CD - Google Cloud Builder
+* CI/CD - Google Cloud Build
 
 This React application is under development and is currently utilizing local storage.
 
